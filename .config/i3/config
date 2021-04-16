@@ -190,3 +190,5 @@ exec blueman-applet
 
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
+
+for_window [class="Caja" instance="caja"] floating enable
