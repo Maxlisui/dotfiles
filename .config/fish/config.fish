@@ -5,6 +5,7 @@ set PATH -g -x $PATH $HOME/.rbenv/plugins/ruby-build/bin
 set PATH -g -x $PATH /usr/local/go/bin
 set PATH -g -x $PATH $HOME/.poetry/bin
 set PATH -g -x $PATH /usr/local/texlive/2021/bin/x86_64-linux
+set PATH -g -x $PATH $HOME/.julia/bin
 
 theme_gruvbox dark hard
 
