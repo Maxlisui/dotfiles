@@ -1,7 +1,5 @@
 set PATH -g -x $PATH /home/maxlisui/.bin
 set PATH -g -x $PATH $HOME/.cargo/bin
-set PATH -g -x $PATH $HOME/.rbenv/bin
-set PATH -g -x $PATH $HOME/.rbenv/plugins/ruby-build/bin
 set PATH -g -x $PATH /usr/local/go/bin
 set PATH -g -x $PATH $HOME/.poetry/bin
 set PATH -g -x $PATH /usr/local/texlive/2021/bin/x86_64-linux
@@ -48,19 +46,4 @@ function fish_prompt
 	set_color red
 	echo -n '| '
 	set_color normal
-end
-
-set -gx PATH '/home/maxlisui/.rbenv/shims' $PATH
-set -gx RBENV_SHELL fish
-command rbenv rehash 2>/dev/null
-function rbenv
-  set command $argv[1]
-  set -e argv[1]
-
-  switch "$command"
-  case rehash shell
-    rbenv "sh-$command" $argv|source
-  case '*'
-    command rbenv "$command" $argv
-  end
 end
